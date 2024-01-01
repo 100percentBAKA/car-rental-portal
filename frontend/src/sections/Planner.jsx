@@ -14,21 +14,34 @@ const StyledCtn = styled(Box)(({ theme, maxWidth }) => ({
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
+  alignItems: "center",
   rowGap: theme.spacing(3),
 }));
 
 const StyledSubCtn = styled(Box)(({ theme }) => ({
   marginTop: theme.spacing(5),
   display: "flex",
-  flexWrap: "wrap",
   flexDirection: "row",
   justifyContent: "center",
+  alignItems: "center",
   columnGap: theme.spacing(15),
+
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+  },
+}));
+
+const StyledMainCtn = styled(Box)(({ theme }) => ({
+  marginBottom: theme.spacing(25),
+
+  [theme.breakpoints.down("md")]: {
+    marginBottom: theme.spacing(145),
+  },
 }));
 
 export default function Planner() {
   return (
-    <Box sx={{ marginBottom: 20 }}>
+    <StyledMainCtn>
       <SubContainer>
         <StyledCtn>
           <CustomBoldText fontSize="1.5rem">Plan your trip now</CustomBoldText>
@@ -51,6 +64,6 @@ export default function Planner() {
           </StyledSubCtn>
         </StyledCtn>
       </SubContainer>
-    </Box>
+    </StyledMainCtn>
   );
 }

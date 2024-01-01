@@ -5,6 +5,7 @@ import Hero from "../sections/Hero";
 import Booking from "../sections/Booking";
 import Planner from "../sections/Planner";
 import Banner from "../sections/Banner";
+import AboutUS from "../sections/AboutUS";
 
 import { Box, styled } from "@mui/material";
 
@@ -31,6 +32,7 @@ export default function Main() {
       <Booking />
       <Planner />
       <Banner />
+      <AboutUS />
     </Box>
   );
 }
