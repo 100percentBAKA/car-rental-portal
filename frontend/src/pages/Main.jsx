@@ -1,6 +1,5 @@
 import HeroBG from "../assets/hero-bg.png";
 
-import Navbar from "../sections/Navbar";
 import Hero from "../sections/Hero";
 import Booking from "../sections/Booking";
 import Planner from "../sections/Planner";
@@ -9,6 +8,7 @@ import AboutUS from "../sections/AboutUS";
 import Testimonials from "../sections/Testimonials";
 
 import { Box, styled } from "@mui/material";
+import Download from "../sections/Download";
 
 //? styled component
 const StyledAbsBox = styled(Box)(({ theme }) => ({
@@ -28,13 +28,13 @@ export default function Main() {
       <StyledAbsBox>
         <img src={HeroBG} alt="Hero BG" />
       </StyledAbsBox>
-      <Navbar />
       <Hero />
       <Booking />
       <Planner />
       <Banner />
       <AboutUS />
       <Testimonials />
+      <Download />
     </Box>
   );
 }

@@ -35,7 +35,14 @@ const SwiperContainer = styled(Swiper)({
 
 export default function Testimonials() {
   return (
-    <Box sx={{ width: "100%", bgcolor: "#f8f8f8", paddingTop: 8 }}>
+    <Box
+      sx={{
+        width: "100%",
+        bgcolor: "#f8f8f8",
+        paddingTop: 8,
+        paddingBottom: 8,
+      }}
+    >
       <StyledSubCtn>
         <StyledVBox>
           <CustomH3 fontSize="1.4rem" fontWeight={500}>

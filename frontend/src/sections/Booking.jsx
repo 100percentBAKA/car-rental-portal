@@ -37,7 +37,7 @@ export default function Booking() {
   };
 
   return (
-    <StyledMainCtn>
+    <StyledMainCtn id="booking">
       <StyledForm action="" onSubmit={handleSubmit}>
         <CustomH3 fontSize="1.8rem">Book A Car</CustomH3>
         <FormControl sx={{ marginBottom: 2 }}>

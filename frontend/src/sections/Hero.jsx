@@ -1,8 +1,9 @@
-import React from "react";
+//? react-scroll
+import { scroller } from "react-scroll";
 
 import MainCar from "../assets/main-car.png";
 
-import { Box, styled } from "@mui/material";
+import { Box, Button, styled } from "@mui/material";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
@@ -13,7 +14,6 @@ import CustomBoldText from "../components/CustomBoldText";
 import CustomH3 from "../components/CustomH3";
 import Highlighter from "../components/Highlighter";
 import CustomText from "../components/CustomText";
-import ContainedButton from "../components/ContainedButton";
 import OutlinedButton from "../components/OutlinedButton";
 
 //? styled components
@@ -46,6 +46,15 @@ const StyledImgBox = styled(Box)(({ theme }) => ({
 }));
 
 export default function Hero() {
+  const scrollToBookingSection = () => {
+    scroller.scrollTo("booking", {
+      duration: 1000,
+      delay: 100,
+      smooth: true,
+      offset: -20,
+    });
+  };
+
   return (
     <Box
       sx={{
@@ -70,10 +79,31 @@ export default function Hero() {
               flexible pick-up options and much more.
             </CustomText>
             <Box sx={{ display: "flex", flexDirection: "row", columnGap: 2 }}>
-              <ContainedButton padding="0.8rem 2rem">
+              <Button
+                onClick={scrollToBookingSection}
+                sx={{
+                  color: "white",
+                  borderRadius: "3px",
+                  textTransform: "none",
+                  backgroundColor: "#ff4d30",
+                  boxShadow: "0 10px 15px 0 rgba(255,83,48,.35)",
+                  fontSize: "1rem",
+                  width: "fit-content",
+                  padding: "0.8rem 1.2rem",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "#e63c1e",
+                  },
+
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: 2,
+                }}
+              >
                 Book Ride &nbsp;
                 <CheckCircleOutlineIcon />
-              </ContainedButton>
+              </Button>
               <OutlinedButton padding="0.8rem 2rem">
                 Learn More &nbsp;
                 <ChevronRightIcon />
