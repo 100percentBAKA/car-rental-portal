@@ -10,31 +10,52 @@ import CustomVBox from "../components/CustomVBox";
 import CustomH3 from "../components/CustomH3";
 import CustomText from "../components/CustomText";
 import ContainedButton from "../components/ContainedButton";
-import CustomHBox from "../components/CustomHBox";
 
 //? styled components
 const StyledCtn = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
-  gap: theme.spacing(5),
+  marginTop: theme.spacing(2),
+  gap: theme.spacing(12),
 
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
   },
 }));
 
+const StyledSubCtn = styled(Box)(({ theme }) => ({
+  flex: 1,
+
+  [theme.breakpoints.down("md")]: {
+    marginBottom: theme.spacing(5),
+  },
+}));
+
+const StyledHBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  columnGap: theme.spacing(2),
+
+  [theme.breakpoints.down("md")]: {
+    height: "250px",
+  },
+}));
+
 export default function AboutUS() {
   return (
-    <Box>
+    <Box sx={{ marginBottom: 12 }}>
       <SubContainer>
-        <img
-          src={aboutImg}
-          alt="About us Main cars"
-          style={{ maxWidth: "100%" }}
-        />
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <img
+            src={aboutImg}
+            alt="About us Main cars"
+            style={{ maxWidth: "100%", alignSelf: "center" }}
+          />
+        </Box>
 
         <StyledCtn>
-          <Box sx={{ flex: 1.1, paddingTop: 5.4 }}>
+          <StyledSubCtn>
             <CustomVBox>
               <CustomH3 fontSize="1.4rem">Why Choose Us</CustomH3>
               <CustomH3 fontSize="2rem" fontWeight={700}>
@@ -53,11 +74,11 @@ export default function AboutUS() {
                 <ChevronRightIcon />
               </ContainedButton>
             </CustomVBox>
-          </Box>
+          </StyledSubCtn>
 
-          <CustomVBox flex={1.25}>
+          <CustomVBox flex={1}>
             {aboutData.map((about) => (
-              <CustomHBox>
+              <StyledHBox key={about.id}>
                 <IconButton>
                   <img
                     src={about.imgSrc}
@@ -70,7 +91,7 @@ export default function AboutUS() {
                   <CustomH3 fontSize="1.4rem">{about.title}</CustomH3>
                   <CustomText>{about.desc}</CustomText>
                 </Box>
-              </CustomHBox>
+              </StyledHBox>
             ))}
           </CustomVBox>
         </StyledCtn>

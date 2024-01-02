@@ -1,22 +1,16 @@
-import { useState } from "react";
-
 import CustomH3 from "../components/CustomH3";
-import CustomBoldText from "../components/CustomBoldText";
-import Highlighter from "../components/Highlighter";
+import locationData from "../data/location";
+import ContainedButton from "../components/ContainedButton";
 
 import {
   Box,
-  Button,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
   TextField,
-  IconButton,
   styled,
 } from "@mui/material";
-
-import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 
 //? styled component
 const StyledForm = styled("form")(({ theme }) => ({
@@ -25,11 +19,16 @@ const StyledForm = styled("form")(({ theme }) => ({
   rowGap: theme.spacing(3),
 }));
 
-const StyledCtn = styled(Box)(({ theme, spacing = 3, flexDirection }) => ({
-  display: "flex",
-  flexDirection: flexDirection || "row",
-  columnGap: theme.spacing(spacing),
-  alignItems: "center",
+const StyledMainCtn = styled(Box)(({ theme }) => ({
+  boxShadow: "0 10px 20px 0 rgba(0,0,0,.1)",
+  marginLeft: theme.spacing(2),
+  marginRight: theme.spacing(2),
+  marginBottom: theme.spacing(20),
+  padding: theme.spacing(5),
+
+  [theme.breakpoints.down("md")]: {
+    marginTop: theme.spacing(10),
+  },
 }));
 
 export default function Booking() {
@@ -38,21 +37,32 @@ export default function Booking() {
   };
 
   return (
-    <Box
-      sx={{
-        marginTop: 10,
-        boxShadow: "0 10px 20px 0 rgba(0,0,0,.1)",
-        marginLeft: 3,
-        marginRight: 3,
-        marginBottom: 20,
-        padding: 5,
-      }}
-    >
+    <StyledMainCtn>
       <StyledForm action="" onSubmit={handleSubmit}>
-        <CustomH3 fontSize="1.5rem" fontWeight="700">
-          Book A Car
-        </CustomH3>
+        <CustomH3 fontSize="1.8rem">Book A Car</CustomH3>
+        <FormControl sx={{ marginBottom: 2 }}>
+          <InputLabel htmlFor="p-location">Select Pickup Location</InputLabel>
+          <Select label="Select Pickup Location" id="p-location">
+            {locationData.map((location) => (
+              <MenuItem value={location.place + "value"} key={location.id}>
+                {location.place}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
+        <TextField
+          fullWidth
+          id="pickup-date"
+          label="Pickup Date"
+          type="date"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          sx={{ marginBottom: 2 }}
+        />
+        <ContainedButton padding="0.8rem 3rem">Search</ContainedButton>
       </StyledForm>
-    </Box>
+    </StyledMainCtn>
   );
 }

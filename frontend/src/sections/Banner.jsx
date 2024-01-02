@@ -13,7 +13,7 @@ export default function Banner() {
         display: "flex",
         flexDirection: "column",
         rowGap: 3,
-        marginBottom: 15,
+        marginBottom: 10,
       }}
     >
       <CustomH3 fontSize="3.2rem" fontWeight={700} color="white">

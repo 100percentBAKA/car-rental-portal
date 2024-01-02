@@ -10,7 +10,7 @@ import CustomText from "../components/CustomText";
 //? styled components
 const StyledCtn = styled(Box)(({ theme, maxWidth }) => ({
   maxWidth: maxWidth,
-  height: "500px",
+  height: "420px",
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
@@ -32,10 +32,10 @@ const StyledSubCtn = styled(Box)(({ theme }) => ({
 }));
 
 const StyledMainCtn = styled(Box)(({ theme }) => ({
-  marginBottom: theme.spacing(25),
+  marginBottom: theme.spacing(30),
 
   [theme.breakpoints.down("md")]: {
-    marginBottom: theme.spacing(145),
+    marginBottom: theme.spacing(135),
   },
 }));
 
@@ -51,7 +51,7 @@ export default function Planner() {
 
           <StyledSubCtn>
             {plannerData.map((plan) => (
-              <StyledCtn maxWidth="200px" key={plan.id}>
+              <StyledCtn maxWidth="250px" key={plan.id}>
                 <img
                   src={plan.imgSrc}
                   alt={`planner - ${plan.id} Icon`}

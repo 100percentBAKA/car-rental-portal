@@ -6,6 +6,7 @@ import Booking from "../sections/Booking";
 import Planner from "../sections/Planner";
 import Banner from "../sections/Banner";
 import AboutUS from "../sections/AboutUS";
+import Testimonials from "../sections/Testimonials";
 
 import { Box, styled } from "@mui/material";
 
@@ -33,6 +34,7 @@ export default function Main() {
       <Planner />
       <Banner />
       <AboutUS />
+      <Testimonials />
     </Box>
   );
 }

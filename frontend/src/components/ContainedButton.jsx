@@ -14,6 +14,11 @@ const ContainedButton = ({ children, padding }) => {
     "&:hover": {
       backgroundColor: "#e63c1e",
     },
+
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: theme.spacing(1),
   }));
 
   return <CustomButton padding={padding}>{children}</CustomButton>;

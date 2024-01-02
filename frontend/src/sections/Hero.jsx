@@ -34,6 +34,17 @@ const StyledImg = styled("img")(({ theme }) => ({
   objectFit: "cover",
 }));
 
+const StyledImgBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flex: 1.3,
+
+  [theme.breakpoints.down("md")]: {
+    paddingTop: theme.spacing(10),
+  },
+}));
+
 export default function Hero() {
   return (
     <Box
@@ -70,16 +81,9 @@ export default function Hero() {
             </Box>
           </CustomVBox>
 
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flex: 1.3,
-            }}
-          >
+          <StyledImgBox>
             <StyledImg src={MainCar} alt="Hero Main Car" />
-          </Box>
+          </StyledImgBox>
         </StyledCtn>
       </SubContainer>
     </Box>
