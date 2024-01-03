@@ -10,6 +10,7 @@ import AboutPage from "./pages/AboutPage"
 
 import { ThemeProvider } from "@mui/material";
 import TestimonialsPage from "./pages/TestimonialsPage";
+import OurTeam from "./pages/OurTeam"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/testimonial" element={<TestimonialsPage />} />
+            <Route path="/team" element={<OurTeam />} />
           </Routes>
         </Router>
       </React.Fragment>
