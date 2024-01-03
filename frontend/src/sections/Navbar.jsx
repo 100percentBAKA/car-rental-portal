@@ -1,5 +1,6 @@
-//? Images Import
 import { useState } from "react";
+
+//? Images Import
 import logo from "../assets/logo.png";
 
 //? Native components import;
@@ -12,11 +13,11 @@ import {
   Drawer,
   IconButton,
   List,
+  Link,
   ListItem,
   ListItemButton,
   ListItemText,
   Toolbar,
-  Typography,
   styled,
 } from "@mui/material";
 
@@ -57,7 +58,8 @@ const NavbarLinkBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const NavbarLink = styled(Typography)(({ theme }) => ({
+const NavbarLink = styled(Link)(({ theme }) => ({
+  textDecoration: "none",
   color: theme.palette.secondary.main,
   fontSize: "1rem",
   cursor: "pointer",
@@ -92,15 +94,35 @@ const pages = [
   "Register",
 ];
 
+const paths = [
+  "/",
+  "/about",
+  "/vehicles",
+  "/testimonials",
+  "team",
+  "contact",
+  "register",
+];
+
 const ListComponent = () => (
   <List>
     {pages.map((page, index) => (
       <ListItem key={index}>
-        <ListItemButton>
+        <ListItemButton href={paths[index]}>
           {page === "Register" ? (
-            <ListItemText primary={page} sx={{ color: "#ff4d30" }} />
+            <Link
+              href={paths[index]}
+              sx={{ color: "#ff4d30", textDecoration: "none" }}
+            >
+              {page}
+            </Link>
           ) : (
-            <ListItemText primary={page} />
+            <Link
+              href={paths[index]}
+              sx={{ textDecoration: "none", color: "black" }}
+            >
+              {page}
+            </Link>
           )}
         </ListItemButton>
       </ListItem>
@@ -135,7 +157,9 @@ export default function Navbar() {
 
       <NavbarLinkBox>
         {pages.map((page, index) => (
-          <NavbarLink key={index}>{page === "Register" ? "" : page}</NavbarLink>
+          <NavbarLink key={index} href={paths[index]}>
+            {page === "Register" ? "" : page}
+          </NavbarLink>
         ))}
       </NavbarLinkBox>
 
