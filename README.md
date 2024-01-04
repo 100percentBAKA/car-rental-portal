@@ -22,7 +22,7 @@
   - [x] Static components created ( 75% )
   - [x] Responsive design ( 75% )
   - [x] Routing implemented ( 80% )
-  - [ ] State management
+  - [x] State management ( 10% )
   - [ ] Integration with Backend
   - [ ] Unit testing
   - [ ] Deployment
