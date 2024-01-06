@@ -2,6 +2,7 @@ import tImg1 from "../assets/team-1.jpg";
 import tImg3 from "../assets/team-2.jpg";
 import tImg4 from "../assets/team-4.jpeg";
 import tImg5 from "../assets/team-5.jpeg";
+import tImg6 from "../assets/Photo.jpg";
 
 import { Box, styled } from "@mui/material";
 import CustomH3 from "../components/CustomH3";

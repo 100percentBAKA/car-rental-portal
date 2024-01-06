@@ -104,7 +104,7 @@ export default function Hero() {
                 Book Ride &nbsp;
                 <CheckCircleOutlineIcon />
               </Button>
-              <OutlinedButton padding="0.8rem 2rem">
+              <OutlinedButton padding="0.8rem 2rem" href="/about">
                 Learn More &nbsp;
                 <ChevronRightIcon />
               </OutlinedButton>

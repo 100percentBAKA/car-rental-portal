@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.98dcb1e4.css",
-    "main.js": "/static/js/main.b73032f3.js",
+    "main.js": "/static/js/main.f58d3a54.js",
+    "static/media/Photo.jpg": "/static/media/Photo.e649a3e6fe08313cf56b.jpg",
     "static/media/about_page-1.png": "/static/media/about_page-1.71ab9a13d73de3860763.png",
     "static/media/aboutus-cars.png": "/static/media/aboutus-cars.70cd75042bdf42515d92.png",
     "static/media/team-2.jpg": "/static/media/team-2.654a9b9a5041a4f03d97.jpg",
@@ -17,10 +18,10 @@
     "static/media/appstore.svg": "/static/media/appstore.35481c6295b0744dfcc00d35874fbdd8.svg",
     "index.html": "/index.html",
     "main.98dcb1e4.css.map": "/static/css/main.98dcb1e4.css.map",
-    "main.b73032f3.js.map": "/static/js/main.b73032f3.js.map"
+    "main.f58d3a54.js.map": "/static/js/main.f58d3a54.js.map"
   },
   "entrypoints": [
     "static/css/main.98dcb1e4.css",
-    "static/js/main.b73032f3.js"
+    "static/js/main.f58d3a54.js"
   ]
 }

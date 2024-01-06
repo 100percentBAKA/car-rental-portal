@@ -1,7 +1,7 @@
 import { Button, styled } from "@mui/material";
 
-const ContainedButton = ({ children, padding }) => {
-  const CustomButton = styled(Button)(({ theme, padding }) => ({
+const ContainedButton = ({ children, padding, href }) => {
+  const CustomButton = styled(Button)(({ theme, padding, href }) => ({
     color: theme.palette.common.white,
     borderRadius: "3px",
     textTransform: "none",
@@ -21,7 +21,11 @@ const ContainedButton = ({ children, padding }) => {
     gap: theme.spacing(1),
   }));
 
-  return <CustomButton padding={padding}>{children}</CustomButton>;
+  return (
+    <CustomButton padding={padding} href={href}>
+      {children}
+    </CustomButton>
+  );
 };
 
 export default ContainedButton;

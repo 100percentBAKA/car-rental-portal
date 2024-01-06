@@ -1,7 +1,7 @@
 import aboutImg from "../assets/aboutus-cars.png";
 import aboutData from "../data/about";
 
-import { Box, IconButton, styled } from "@mui/material";
+import { Box, IconButton, styled, Link } from "@mui/material";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
@@ -69,7 +69,7 @@ export default function AboutUS() {
                 the ultimate renting experience, so don't miss out on your
                 chance to save big.
               </CustomText>
-              <ContainedButton padding="0.8rem 2rem">
+              <ContainedButton padding="0.8rem 2rem" href="/about">
                 Find Details &nbsp;
                 <ChevronRightIcon />
               </ContainedButton>

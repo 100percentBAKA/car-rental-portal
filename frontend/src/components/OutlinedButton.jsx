@@ -1,7 +1,7 @@
 import { Button, styled } from "@mui/material";
 
-const OutlinedButton = ({ children, padding }) => {
-  const CustomButton = styled(Button)(({ theme, padding }) => ({
+const OutlinedButton = ({ children, padding, href }) => {
+  const CustomButton = styled(Button)(({ theme, padding, href }) => ({
     color: theme.palette.common.white,
     borderRadius: "3px",
     textTransform: "none",
@@ -17,7 +17,11 @@ const OutlinedButton = ({ children, padding }) => {
     },
   }));
 
-  return <CustomButton padding={padding}>{children}</CustomButton>;
+  return (
+    <CustomButton padding={padding} href={href}>
+      {children}
+    </CustomButton>
+  );
 };
 
 export default OutlinedButton;

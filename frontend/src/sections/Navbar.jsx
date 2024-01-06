@@ -16,13 +16,16 @@ import {
   Link,
   ListItem,
   ListItemButton,
-  ListItemText,
   Toolbar,
   styled,
+  Typography,
 } from "@mui/material";
 
 //? MUI icon components
 import { Menu as MenuIcon } from "@mui/icons-material";
+
+//? importing Contexts
+import { useModalContext } from "../contexts/ModalContextProvider";
 
 //? Styled Components
 const StyledNavbar = styled(AppBar)(({ theme }) => ({
@@ -104,33 +107,36 @@ const paths = [
   "register",
 ];
 
-const ListComponent = () => (
+const ListComponent = ({ closeMenu }) => (
   <List>
     {pages.map((page, index) => (
       <ListItem key={index}>
-        <ListItemButton href={paths[index]}>
-          {page === "Register" ? (
+        {page === "Register" ? (
+          <ListItemButton onClick={closeMenu}>
             <Link
-              href={paths[index]}
               sx={{ color: "#ff4d30", textDecoration: "none" }}
+              component={Typography}
             >
               {page}
             </Link>
-          ) : (
+          </ListItemButton>
+        ) : (
+          <ListItemButton href={paths[index]}>
             <Link
               href={paths[index]}
               sx={{ textDecoration: "none", color: "black" }}
             >
               {page}
             </Link>
-          )}
-        </ListItemButton>
+          </ListItemButton>
+        )}
       </ListItem>
     ))}
   </List>
 );
 
 export default function Navbar() {
+  const { openModal } = useModalContext();
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -151,7 +157,7 @@ export default function Navbar() {
           open={showMenu}
           onClose={(e) => setShowMenu(false)}
         >
-          <ListComponent />
+          <ListComponent closeMenu={(e) => setShowMenu(false)} />
         </Drawer>
       </Toolbar>
 
@@ -163,7 +169,7 @@ export default function Navbar() {
         ))}
       </NavbarLinkBox>
 
-      <StyledButtonContainer>
+      <StyledButtonContainer onClick={openModal}>
         <ContainedButton padding="0.8rem 1.6rem">Register</ContainedButton>
       </StyledButtonContainer>
 

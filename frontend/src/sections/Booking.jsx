@@ -61,6 +61,17 @@ export default function Booking() {
           }}
           sx={{ marginBottom: 2 }}
         />
+
+        <TextField
+          fullWidth
+          id="dropoff-date"
+          label="Drop Off Date"
+          type="date"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          sx={{ marginBottom: 2 }}
+        />
         <ContainedButton padding="0.8rem 3rem">Search</ContainedButton>
       </StyledForm>
     </StyledMainCtn>
