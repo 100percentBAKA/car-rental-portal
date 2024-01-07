@@ -6,6 +6,9 @@
 # testing
 /frontend/coverage
 
+#production
+/frontend/build
+
 # misc
 /frontend/.DS_Store
 /frontend/.env.local
@@ -16,3 +19,6 @@
 /frontend/npm-debug.log*
 /frontend/yarn-debug.log*
 /frontend/yarn-error.log*
+
+#ignore .env files 
+/backend/db_config.env

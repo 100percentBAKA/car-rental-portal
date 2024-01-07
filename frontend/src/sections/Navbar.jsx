@@ -7,6 +7,7 @@ import logo from "../assets/logo.png";
 import ContainedButton from "../components/ContainedButton";
 
 //? MUI components import
+import { useTheme } from "@mui/material/styles";
 import {
   AppBar,
   Box,
@@ -19,6 +20,7 @@ import {
   Toolbar,
   styled,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 
 //? MUI icon components
@@ -139,6 +141,10 @@ export default function Navbar() {
   const { openModal } = useModalContext();
   const [showMenu, setShowMenu] = useState(false);
 
+  //? useMediaQuery
+  const theme = useTheme();
+  const isScreenSmaller = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <StyledNavbar>
       <Toolbar>
@@ -152,13 +158,18 @@ export default function Navbar() {
         >
           <StyledLogo src={logo} alt="logo" />
         </IconButton>
-        <Drawer
-          anchor="left"
-          open={showMenu}
-          onClose={(e) => setShowMenu(false)}
-        >
-          <ListComponent closeMenu={(e) => setShowMenu(false)} />
-        </Drawer>
+        {isScreenSmaller ? (
+          <Drawer
+            anchor="left"
+            open={showMenu}
+            onClose={(e) => setShowMenu(false)}
+            variant="temporary"
+          >
+            <ListComponent closeMenu={(e) => setShowMenu(false)} />
+          </Drawer>
+        ) : (
+          ""
+        )}
       </Toolbar>
 
       <NavbarLinkBox>
