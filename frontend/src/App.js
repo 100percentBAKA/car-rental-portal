@@ -1,5 +1,5 @@
 //* main react imports
-import React, { useState } from "react";
+import React from "react";
 
 //* react router imports 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -14,6 +14,7 @@ import Main from "./pages/MainPage"
 import AboutPage from "./pages/AboutPage"
 import TestimonialsPage from "./pages/TestimonialsPage";
 import OurTeam from "./pages/OurTeamPage"
+import NotFound from "./pages/NotFound";
 
 //* MUI components imports 
 import { ThemeProvider } from "@mui/material";
@@ -32,6 +33,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/testimonials" element={<TestimonialsPage />} />
               <Route path="/team" element={<OurTeam />} />
+              <Route path="*" element={<NotFound />}></Route>
             </Routes>
           </ModalContextProvider>
         </Router>
@@ -41,3 +43,5 @@ function App() {
 }
 
 export default App;
+
+
