@@ -24,3 +24,5 @@
 /backend/db_config.env
 
 /.vscode
+
+backend/src/main/resources/application.yml/
