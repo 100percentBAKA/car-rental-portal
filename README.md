@@ -5,8 +5,8 @@
 <details>
   <summary>STATUS</summary>
   
-  - [ ] Database design
-  - [ ] API development
+  - [x] Database design ( 100% )
+  - [x] API development ( 20% )
   - [ ] Authentication
   - [ ] Unit testing
   - [ ] Integration testing
@@ -19,9 +19,9 @@
 <details>
   <summary>STATUS</summary>
   
-  - [x] Static components created ( 75% )
-  - [x] Responsive design ( 75% )
-  - [x] Routing implemented ( 80% )
+  - [x] Static components created ( 85% )
+  - [x] Responsive design ( 85% )
+  - [x] Routing implemented ( 90% )
   - [x] State management ( 10% )
   - [ ] Integration with Backend
   - [ ] Unit testing
