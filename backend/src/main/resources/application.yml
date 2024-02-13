@@ -6,9 +6,9 @@ spring:
       max-request-size: 10MB
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/<db_name>
-    username: <username>
-    password: <password>
+    url: jdbc:mysql://localhost:3306/car_rental_db
+    username: root
+    password: a55bdctyF
   jpa:
     show-sql: true
     hibernate:
