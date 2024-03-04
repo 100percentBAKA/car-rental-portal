@@ -4,6 +4,7 @@ import Testimonials from "../sections/Testimonials";
 import Banner from "../sections/Banner2";
 
 import { Box } from "@mui/material";
+import FAQs from "../sections/FAQs";
 
 export default function TestimonialsPage() {
   return (
@@ -27,6 +28,7 @@ export default function TestimonialsPage() {
 
       <Testimonials />
       <Banner />
+      <FAQs />
     </Box>
   );
 }

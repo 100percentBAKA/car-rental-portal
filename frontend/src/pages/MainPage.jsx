@@ -6,9 +6,11 @@ import Planner from "../sections/Planner";
 import Banner from "../sections/Banner";
 import AboutUS from "../sections/AboutUS";
 import Testimonials from "../sections/Testimonials";
+import Footer from "../sections/Footer";
 
 import { Box, styled } from "@mui/material";
 import Download from "../sections/Download";
+import FAQs from "../sections/FAQs";
 
 //? styled component
 const StyledAbsBox = styled(Box)(({ theme }) => ({
@@ -35,6 +37,7 @@ export default function Main() {
       <AboutUS />
       <Testimonials />
       <Download />
+      <FAQs />
     </Box>
   );
 }

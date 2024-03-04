@@ -9,6 +9,7 @@ import CustomH3 from "../components/CustomH3";
 
 import HoverCard from "../components/HoverCard";
 import HeroBanner from "../components/HeroBanner";
+import FAQs from "../sections/FAQs";
 
 //? styled components
 const StyledMainCtn = styled(Box)(({ theme }) => ({
@@ -53,6 +54,7 @@ export default function OurTeam() {
           <HoverCard imgSrc={tImg5}></HoverCard>
         </StyledMainCtn>
       </Box>
+      <FAQs />
     </Box>
   );
 }

@@ -14,6 +14,7 @@ import Planner from "../sections/Planner";
 import Banner from "../sections/Banner";
 
 import { Box, styled } from "@mui/material";
+import FAQs from "../sections/FAQs";
 
 //? styled components
 const StyledCtnBox = styled(Box)(({ theme }) => ({
@@ -100,10 +101,10 @@ export default function AboutPage() {
             </StyledIconBox>
           </CustomVBox>
         </StyledCtnBox>
-
         <Planner />
       </SubContainer>
       <Banner />
+      <FAQs />
     </Box>
   );
 }

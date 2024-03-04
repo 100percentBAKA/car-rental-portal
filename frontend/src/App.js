@@ -19,6 +19,7 @@ import NotFound from "./pages/NotFound";
 //* MUI components imports 
 import { ThemeProvider } from "@mui/material";
 import ModalContextProvider from "./contexts/ModalContextProvider";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               <Route path="/team" element={<OurTeam />} />
               <Route path="*" element={<NotFound />}></Route>
             </Routes>
+            <Footer />
           </ModalContextProvider>
         </Router>
       </React.Fragment>
